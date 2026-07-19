@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+
+{% block body_class %}page-gallery{% endblock %}
+
+{% block content %}
+<section class="page-header" aria-label="Page header">
+    <div class="page-header-bg">
+        <div class="page-header-overlay"></div>
+    </div>
+    <div class="container">
+        <h1>Project Gallery</h1>
+        <nav aria-label="Breadcrumb">
+            <ol class="breadcrumb">
+                <li><a href="/">Home</a></li>
+                <li aria-current="page">Gallery</li>
+            </ol>
+        </nav>
+    </div>
+</section>
+
+<section class="gallery-page" aria-labelledby="gallery-page-heading">
+    <div class="container">
+        <div class="section-header">
+            <h2 id="gallery-page-heading" class="section-title">Our Projects</h2>
+            <p class="section-subtitle gallery-notice">Real project photos will be added here. Images below are clearly labelled placeholders.</p>
+        </div>
+
+        <div class="gallery-filter" role="tablist" aria-label="Filter gallery by category">
+            <button class="gallery-filter-btn active" data-filter="all" role="tab" aria-selected="true">All</button>
+            <button class="gallery-filter-btn" data-filter="new-roof" role="tab" aria-selected="false">New Roofs</button>
+            <button class="gallery-filter-btn" data-filter="restoration" role="tab" aria-selected="false">Restoration</button>
+            <button class="gallery-filter-btn" data-filter="repairs" role="tab" aria-selected="false">Repairs</button>
+            <button class="gallery-filter-btn" data-filter="leadwork" role="tab" aria-selected="false">Leadwork</button>
+        </div>
+
+        <div class="gallery-masonry" id="gallery-masonry">
+            <figure class="gallery-masonry-item" data-category="new-roof" data-index="0">
+                <div class="gallery-image-placeholder" role="img" aria-label="New roof installation Glasgow West End - placeholder">
+                    <span class="placeholder-label">[Photo pending]<br>New Roof — West End</span>
+                </div>
+                <figcaption>New Roof Installation — Glasgow West End</figcaption>
+            </figure>
+            <figure class="gallery-masonry-item" data-category="restoration" data-index="1">
+                <div class="gallery-image-placeholder" role="img" aria-label="Roof restoration Dennistoun Glasgow - placeholder">
+                    <span class="placeholder-label">[Photo pending]<br>Restoration — Dennistoun</span>
+                </div>
+                <figcaption>Roof Restoration — Dennistoun</figcaption>
+            </figure>
+            <figure class="gallery-masonry-item" data-category="repairs" data-index="2">
+                <div class="gallery-image-placeholder" role="img" aria-label="Emergency roof repair Shawlands Glasgow - placeholder">
+                    <span class="placeholder-label">[Photo pending]<br>Emergency Repair — Shawlands</span>
+                </div>
+                <figcaption>Emergency Repair — Shawlands</figcaption>
+            </figure>
+            <figure class="gallery-masonry-item" data-category="leadwork" data-index="3">
+                <div class="gallery-image-placeholder" role="img" aria-label="Leadwork chimney flashing Glasgow - placeholder">
+                    <span class="placeholder-label">[Photo pending]<br>Leadwork — Chimney Flashing</span>
+                </div>
+                <figcaption>Leadwork — Chimney Flashing</figcaption>
+            </figure>
+            <figure class="gallery-masonry-item" data-category="new-roof" data-index="4">
+                <div class="gallery-image-placeholder" role="img" aria-label="Commercial roofing Glasgow city centre - placeholder">
+                    <span class="placeholder-label">[Photo pending]<br>Commercial — City Centre</span>
+                </div>
+                <figcaption>Commercial Roofing — Glasgow City Centre</figcaption>
+            </figure>
+            <figure class="gallery-masonry-item" data-category="new-roof" data-index="5">
+                <div class="gallery-image-placeholder" role="img" aria-label="EPDM rubber flat roof Partick Glasgow - placeholder">
+                    <span class="placeholder-label">[Photo pending]<br>Flat Roof — Partick</span>
+                </div>
+                <figcaption>EPDM Rubber Flat Roof — Partick</figcaption>
+            </figure>
+            <figure class="gallery-masonry-item" data-category="restoration" data-index="6">
+                <div class="gallery-image-placeholder" role="img" aria-label="Slate roof restoration East Kilbride - placeholder">
+                    <span class="placeholder-label">[Photo pending]<br>Slate Restoration — East Kilbride</span>
+                </div>
+                <figcaption>Slate Roof Restoration — East Kilbride</figcaption>
+            </figure>
+            <figure class="gallery-masonry-item" data-category="repairs" data-category="leadwork" data-index="7">
+                <div class="gallery-image-placeholder" role="img" aria-label="Valley gutter repair Newton Mearns - placeholder">
+                    <span class="placeholder-label">[Photo pending]<br>Valley Repair — Newton Mearns</span>
+                </div>
+                <figcaption>Valley Gutter Repair — Newton Mearns</figcaption>
+            </figure>
+            <figure class="gallery-masonry-item" data-category="new-roof" data-index="8">
+                <div class="gallery-image-placeholder" role="img" aria-label="Tile roof installation Paisley - placeholder">
+                    <span class="placeholder-label">[Photo pending]<br>Tile Roof — Paisley</span>
+                </div>
+                <figcaption>Tile Roof Installation — Paisley</figcaption>
+            </figure>
+            <figure class="gallery-masonry-item" data-category="leadwork" data-index="9">
+                <div class="gallery-image-placeholder" role="img" aria-label="Custom leadwork Bishopbriggs - placeholder">
+                    <span class="placeholder-label">[Photo pending]<br>Custom Leadwork — Bishopbriggs</span>
+                </div>
+                <figcaption>Custom Leadwork — Bishopbriggs</figcaption>
+            </figure>
+            <figure class="gallery-masonry-item" data-category="repairs" data-index="10">
+                <div class="gallery-image-placeholder" role="img" aria-label="Gutter repair Cambuslang - placeholder">
+                    <span class="placeholder-label">[Photo pending]<br>Gutter Repair — Cambuslang</span>
+                </div>
+                <figcaption>Gutter Repair — Cambuslang</figcaption>
+            </figure>
+            <figure class="gallery-masonry-item" data-category="new-roof" data-index="11">
+                <div class="gallery-image-placeholder" role="img" aria-label="Steel roof installation Clydebank - placeholder">
+                    <span class="placeholder-label">[Photo pending]<br>Steel Roof — Clydebank</span>
+                </div>
+                <figcaption>Steel Roof Installation — Clydebank</figcaption>
+            </figure>
+        </div>
+    </div>
+</section>
+{% endblock %}

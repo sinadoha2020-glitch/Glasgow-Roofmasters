@@ -1,0 +1,54 @@
+<div class="modal" id="inspection-modal" role="dialog" aria-modal="true" aria-label="Book a free inspection" hidden>
+    <div class="modal-overlay" data-close-modal></div>
+    <div class="modal-content">
+        <button class="modal-close" data-close-modal aria-label="Close form">&times;</button>
+        <div class="modal-header">
+            <h2>Book Your Free Inspection</h2>
+            <p>No obligation. We will assess your roof and provide a detailed quote.</p>
+        </div>
+        <form class="inspection-form" id="inspection-form" action="/api/inspection-request" method="POST">
+            <div class="form-group">
+                <label for="inspection-name">Full Name <span class="required">*</span></label>
+                <input type="text" id="inspection-name" name="name" required autocomplete="name" placeholder="John Smith">
+            </div>
+            <div class="form-group">
+                <label for="inspection-email">Email Address <span class="required">*</span></label>
+                <input type="email" id="inspection-email" name="email" required autocomplete="email" placeholder="john@example.com">
+            </div>
+            <div class="form-group">
+                <label for="inspection-phone">Phone Number <span class="required">*</span></label>
+                <input type="tel" id="inspection-phone" name="phone" required autocomplete="tel" placeholder="0141 266 0600">
+            </div>
+            <div class="form-group">
+                <label for="inspection-service">Service Required</label>
+                <select id="inspection-service" name="service_type">
+                    <option value="">Select a service...</option>
+                    <option value="new-roof">New Roof Installation</option>
+                    <option value="restoration">Roof Restoration</option>
+                    <option value="repairs">Roof Repairs</option>
+                    <option value="emergency-repairs">Emergency Repairs</option>
+                    <option value="leadwork">Leadwork</option>
+                    <option value="other">Other / Not Sure</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="inspection-message">Additional Details</label>
+                <textarea id="inspection-message" name="message" rows="3" placeholder="Tell us about your roofing needs..."></textarea>
+            </div>
+            <div class="form-group form-privacy">
+                <label class="checkbox-label">
+                    <input type="checkbox" name="consent" required>
+                    <span>I agree to be contacted about my free inspection request.</span>
+                </label>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">
+                <span class="btn-text">Request Free Inspection</span>
+                <span class="btn-loader" hidden>
+                    <svg class="spinner" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10" stroke-dasharray="60" stroke-dashoffset="20"/></svg>
+                    Sending...
+                </span>
+            </button>
+            <div class="form-message" role="status" aria-live="polite" hidden></div>
+        </form>
+    </div>
+</div>
