@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+
+{% block body_class %}page-pricing{% endblock %}
+
+{% block content %}
+<section class="page-header" aria-label="Page header">
+    <div class="page-header-bg">
+        <div class="page-header-overlay"></div>
+    </div>
+    <div class="container">
+        <h1>Pricing</h1>
+        <nav aria-label="Breadcrumb">
+            <ol class="breadcrumb">
+                <li><a href="/">Home</a></li>
+                <li aria-current="page">Pricing</li>
+            </ol>
+        </nav>
+    </div>
+</section>
+
+<section class="pricing-content" aria-labelledby="pricing-heading">
+    <div class="container">
+        <div class="section-header">
+            <h2 id="pricing-heading" class="section-title">Transparent Roofing Pricing</h2>
+            <p class="section-subtitle">Every project is unique. Request a free, no-obligation inspection for an accurate quote.</p>
+        </div>
+
+        <div class="pricing-intro">
+            <div class="pricing-card pricing-highlight">
+                <div class="pricing-card-header">
+                    <h3>Free Inspection & Quote</h3>
+                    <p class="pricing-price">No Charge</p>
+                </div>
+                <ul class="pricing-features">
+                    <li>Thorough roof assessment</li>
+                    <li>Detailed written quote</li>
+                    <li>No obligation to proceed</li>
+                    <li>Expert recommendations</li>
+                </ul>
+                <button class="btn btn-primary inspection-trigger" data-modal="inspection-modal">Book Now</button>
+            </div>
+        </div>
+
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <div class="pricing-card-header">
+                    <h3>Roof Repairs</h3>
+                    <p class="pricing-note">From minor fixes to significant damage</p>
+                </div>
+                <p class="pricing-desc">Pricing depends on the extent of damage, materials required, and access considerations. Typical repairs range from small tile replacements to comprehensive leak remediation.</p>
+                <a href="/services/repairs" class="pricing-link">View Repair Services</a>
+            </div>
+
+            <div class="pricing-card">
+                <div class="pricing-card-header">
+                    <h3>Roof Restoration</h3>
+                    <p class="pricing-note">Extend roof life by 10–20 years</p>
+                </div>
+                <p class="pricing-desc">Restoration is typically 40–60% of the cost of full replacement. Exact pricing depends on roof size, current condition, and the restoration methods required.</p>
+                <a href="/services/restoration" class="pricing-link">View Restoration Services</a>
+            </div>
+
+            <div class="pricing-card">
+                <div class="pricing-card-header">
+                    <h3>New Roof Installation</h3>
+                    <p class="pricing-note">Complete replacement with full warranty</p>
+                </div>
+                <p class="pricing-desc">New roof costs vary significantly based on material choice (felt, EPDM, tiles, slate, steel), roof size, complexity, and access. We provide itemised quotes.</p>
+                <a href="/services/new-roof" class="pricing-link">View Installation Services</a>
+            </div>
+
+            <div class="pricing-card">
+                <div class="pricing-card-header">
+                    <h3>Emergency Repairs</h3>
+                    <p class="pricing-note">Rapid response when you need it most</p>
+                </div>
+                <p class="pricing-desc">Emergency call-out fees apply for out-of-hours response. [EDIT: confirm with business — specific emergency pricing structure]. Temporary weatherproofing and permanent solutions quoted separately.</p>
+                <a href="/services/emergency-repairs" class="pricing-link">View Emergency Services</a>
+            </div>
+
+            <div class="pricing-card">
+                <div class="pricing-card-header">
+                    <h3>Leadwork</h3>
+                    <p class="pricing-note">Specialist craftsmanship</p>
+                </div>
+                <p class="pricing-desc">Leadwork is priced by the linear metre or by project, depending on complexity. Chimney flashing, valleys, and custom work are quoted individually.</p>
+                <a href="/services/leadwork" class="pricing-link">View Leadwork Services</a>
+            </div>
+        </div>
+
+        <div class="pricing-guarantee">
+            <h3>Our Pricing Promise</h3>
+            <div class="guarantee-grid">
+                <div class="guarantee-item">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+                    <h4>No Hidden Costs</h4>
+                    <p>Your quote includes all labour, materials, and waste disposal. No surprises.</p>
+                </div>
+                <div class="guarantee-item">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+                    <h4>Pay on Completion</h4>
+                    <p>You only pay once the work is finished to the agreed specification.</p>
+                </div>
+                <div class="guarantee-item">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+                    <h4>5-Year Warranty</h4>
+                    <p>All work is backed by our workmanship warranty for complete peace of mind.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

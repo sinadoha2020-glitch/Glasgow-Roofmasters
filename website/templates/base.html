@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>{% block title %}{{ title }}{% endblock %}</title>
+    <meta name="description" content="{% block meta_desc %}{{ meta_desc }}{% endblock %}">
+    <meta name="robots" content="index, follow">
+    <meta name="geo.region" content="GB-SCT">
+    <meta name="geo.placename" content="Glasgow">
+    <meta name="geo.position" content="55.8609;-4.2514">
+    <meta name="ICBM" content="55.8609, -4.2514">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="business.business">
+    <meta property="og:title" content="{% block og_title %}{{ title }}{% endblock %}">
+    <meta property="og:description" content="{% block og_desc %}{{ meta_desc }}{% endblock %}">
+    <meta property="og:url" content="{{ request.url }}">
+    <meta property="og:image" content="{{ url_for('static', filename='images/og-image.jpg', _external=True) }}">
+    <meta property="business:contact_data:street_address" content="236 Sauchiehall St">
+    <meta property="business:contact_data:locality" content="Glasgow">
+    <meta property="business:contact_data:postal_code" content="G2 3HQ">
+    <meta property="business:contact_data:country_name" content="United Kingdom">
+    <meta property="business:contact_data:phone_number" content="+441412660600">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{% block twitter_title %}{{ title }}{% endblock %}">
+    <meta name="twitter:description" content="{% block twitter_desc %}{{ meta_desc }}{% endblock %}">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="{{ request.url }}">
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://maps.googleapis.com">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    {% block extra_css %}{% endblock %}
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='images/favicon.svg') }}">
+
+    <!-- LocalBusiness Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "RoofingContractor",
+        "name": "Glasgow Roofmasters",
+        "image": "{{ url_for('static', filename='images/logo.png', _external=True) }}",
+        "@id": "https://glasgowroofmasters.co.uk",
+        "url": "https://glasgowroofmasters.co.uk",
+        "telephone": "+441412660600",
+        "email": "post@glasgowroofmasters.co.uk",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "236 Sauchiehall St",
+            "addressLocality": "Glasgow",
+            "postalCode": "G2 3HQ",
+            "addressCountry": "GB"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 55.8656,
+            "longitude": -4.2641
+        },
+        "openingHoursSpecification": [
+            {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "09:00", "closes": "18:00"}
+        ],
+        "priceRange": "££",
+        "areaServed": {
+            "@type": "City",
+            "name": "Glasgow"
+        },
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Roofing Services",
+            "itemListElement": [
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "New Roof Installation"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Roof Restoration"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Roof Repairs"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Emergency Roof Repairs"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Leadwork"}}
+            ]
+        }
+    }
+    </script>
+
+    <!-- Breadcrumb Schema (on non-home pages) -->
+    {% if request.path != '/' %}
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://glasgowroofmasters.co.uk/"},
+            {"@type": "ListItem", "position": 2, "name": "{% block breadcrumb_name %}{{ title.split('|')[0].strip() }}{% endblock %}", "item": "{{ request.url }}"}
+        ]
+    }
+    </script>
+    {% endif %}
+
+    {% block schema_extra %}{% endblock %}
+</head>
+<body class="{% block body_class %}{% endblock %}">
+    <!-- Skip Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation -->
+    {% include 'partials/navigation.html' %}
+
+    <!-- Main Content -->
+    <main id="main-content">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    {% include 'partials/footer.html' %}
+
+    <!-- Mobile Bottom Bar -->
+    {% include 'partials/mobile-bar.html' %}
+
+    <!-- Lightbox Modal -->
+    {% include 'partials/lightbox.html' %}
+
+    <!-- Inspection Modal -->
+    {% include 'partials/inspection-modal.html' %}
+
+    <!-- Scripts -->
+    <script src="{{ url_for('static', filename='js/main.js') }}" defer></script>
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

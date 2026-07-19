@@ -1,0 +1,72 @@
+<header class="site-header" id="site-header">
+    <div class="header-inner">
+        <a href="/" class="logo" aria-label="Glasgow Roofmasters - Home">
+            <svg class="logo-mark" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M24 4L4 20h6v24h10V28h8v16h10V20h6L24 4z" fill="#1B3A57"/>
+                <path d="M24 8L10 20h4v20h6V24h8v16h6V20h4L24 8z" fill="none" stroke="#E8593A" stroke-width="1.5"/>
+            </svg>
+            <div class="logo-text">
+                <span class="logo-name">Glasgow</span>
+                <span class="logo-sub">Roofmasters</span>
+            </div>
+        </a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+            <ul class="nav-list">
+                <li><a href="/" {% if request.path == '/' %}class="active"{% endif %}>Home</a></li>
+                <li><a href="/about" {% if request.path == '/about' %}class="active"{% endif %}>About</a></li>
+                <li class="has-dropdown">
+                    <a href="/services" {% if request.path.startswith('/services') %}class="active"{% endif %}>Services</a>
+                    <ul class="dropdown">
+                        <li><a href="/services/new-roof">New Roof Installation</a></li>
+                        <li><a href="/services/restoration">Roof Restoration</a></li>
+                        <li><a href="/services/repairs">Roof Repairs</a></li>
+                        <li><a href="/services/emergency-repairs">Emergency Repairs</a></li>
+                        <li><a href="/services/leadwork">Leadwork</a></li>
+                    </ul>
+                </li>
+                <li><a href="/pricing" {% if request.path == '/pricing' %}class="active"{% endif %}>Pricing</a></li>
+                <li><a href="/service-areas" {% if request.path == '/service-areas' %}class="active"{% endif %}>Areas</a></li>
+                <li><a href="/gallery" {% if request.path == '/gallery' %}class="active"{% endif %}>Gallery</a></li>
+                <li><a href="/faq" {% if request.path == '/faq' %}class="active"{% endif %}>FAQ</a></li>
+                <li><a href="/contact" {% if request.path == '/contact' %}class="active"{% endif %}>Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-actions">
+            <a href="tel:{{ business.phone }}" class="header-phone" aria-label="Call us">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.56 12.56 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.56 12.56 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <span>{{ business.phone }}</span>
+            </a>
+            <button class="btn btn-primary inspection-trigger" data-modal="inspection-modal">
+                Free Inspection
+            </button>
+        </div>
+
+        <button class="mobile-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+    </div>
+</header>
+
+<!-- Mobile Menu Overlay -->
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <nav aria-label="Mobile navigation">
+        <ul class="mobile-nav-list">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/pricing">Pricing</a></li>
+            <li><a href="/service-areas">Service Areas</a></li>
+            <li><a href="/gallery">Gallery</a></li>
+            <li><a href="/faq">FAQ</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="mobile-contact">
+        <a href="tel:{{ business.phone }}" class="mobile-phone">{{ business.phone }}</a>
+        <button class="btn btn-primary inspection-trigger" data-modal="inspection-modal">Book Free Inspection</button>
+    </div>
+</div>
