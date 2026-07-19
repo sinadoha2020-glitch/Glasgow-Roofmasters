@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#1B3A57"/>
+  <rect x="0" y="0" width="1200" height="630" fill="url(#grad)" opacity="0.3"/>
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1B3A57;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2a5a7a;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <text x="600" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="72" font-weight="bold" fill="white">Glasgow Roofmasters</text>
+  <text x="600" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" fill="#E8593A">Professional Roofing Services</text>
+  <text x="600" y="420" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="rgba(255,255,255,0.7)">Glasgow & Surrounding Areas | Free Inspection</text>
+  <path d="M600 480 L580 500 L620 500 Z" fill="#E8593A" opacity="0.5"/>
+</svg>

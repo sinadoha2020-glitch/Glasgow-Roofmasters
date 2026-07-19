@@ -1,0 +1,328 @@
+{% extends "base.html" %}
+
+{% block body_class %}page-home{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero" aria-label="Hero">
+    <div class="hero-bg">
+        <div class="hero-bg-placeholder" role="img" aria-label="Professional roofing work on a Glasgow residential property"></div>
+        <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content">
+        <div class="container">
+            <h1 class="hero-title">Need a New Roof, Emergency Repairs, or Leadwork in Glasgow?</h1>
+            <p class="hero-subtitle">Glasgow Roofmasters offers a free, no-obligation inspection and a pay-on-completion model — you only pay once the work is completed to your satisfaction.</p>
+            <div class="hero-actions">
+                <button class="btn btn-primary btn-lg inspection-trigger" data-modal="inspection-modal">Book a Free Inspection</button>
+                <a href="tel:{{ business.phone }}" class="btn btn-outline btn-lg">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.56 12.56 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.56 12.56 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    Call {{ business.phone }}
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="hero-scroll-indicator" aria-hidden="true">
+        <span>Scroll</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+    </div>
+</section>
+
+<!-- Trust Bar -->
+<section class="trust-bar" aria-label="Our commitments">
+    <div class="container">
+        <div class="trust-grid">
+            <div class="trust-item">
+                <div class="trust-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                </div>
+                <h3>Free Inspection</h3>
+                <p>No obligation assessment of your roofing needs</p>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <h3>Pay on Completion</h3>
+                <p>Only pay once work is completed as agreed</p>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <h3>5-Year Warranty</h3>
+                <p>Workmanship warranty plus manufacturer material warranties</p>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+                </div>
+                <h3>Fully Insured</h3>
+                <p>Full liability insurance for your peace of mind</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Grid -->
+<section class="services-section" aria-labelledby="services-heading">
+    <div class="container">
+        <div class="section-header">
+            <h2 id="services-heading" class="section-title">Our Roofing Services</h2>
+            <p class="section-subtitle">Complete roofing solutions for residential and commercial properties across Glasgow</p>
+        </div>
+        <div class="services-grid">
+            <a href="/services/new-roof" class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M32 8L8 28h6v24h12V36h12v16h12V28h6L32 8z"/><path d="M32 14L16 28h4v20h8V32h8v16h8V28h4L32 14z"/></svg>
+                </div>
+                <h3>New Roof Installation</h3>
+                <p>Felt, EPDM rubber, fibreglass, tiles, slate & steel roofing systems installed to Scottish Building Standards.</p>
+                <span class="service-link">Learn more <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></span>
+            </a>
+            <a href="/services/restoration" class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M32 8L8 28h6v24h12V36h12v16h12V28h6L32 8z"/><path d="M20 40h24M20 44h24M20 48h16"/><circle cx="32" cy="22" r="4"/></svg>
+                </div>
+                <h3>Roof Restoration</h3>
+                <p>Extend the life of your existing roof by 10–20 years with our comprehensive restoration service.</p>
+                <span class="service-link">Learn more <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></span>
+            </a>
+            <a href="/services/repairs" class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M32 8L8 28h6v24h12V36h12v16h12V28h6L32 8z"/><path d="M24 32l8 8M32 32l-8 8"/><circle cx="32" cy="32" r="12" stroke-dasharray="4 4"/></svg>
+                </div>
+                <h3>Roof Repairs</h3>
+                <p>From minor leaks to significant damage — fast, reliable repairs using quality materials.</p>
+                <span class="service-link">Learn more <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></span>
+            </a>
+            <a href="/services/emergency-repairs" class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M32 8L8 28h6v24h12V36h12v16h12V28h6L32 8z"/><path d="M32 16v12M32 32v2"/><circle cx="32" cy="32" r="16" stroke-dasharray="4 4"/><path d="M28 20l4-4 4 4"/></svg>
+                </div>
+                <h3>Emergency Repairs</h3>
+                <p>[EDIT: confirm with business] target response time for urgent roofing emergencies across Glasgow.</p>
+                <span class="service-link">Learn more <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></span>
+            </a>
+            <a href="/services/leadwork" class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M32 8L8 28h6v24h12V36h12v16h12V28h6L32 8z"/><path d="M16 28c0 0 8-8 16-8s16 8 16 8"/><path d="M24 36c4-4 12-4 16 0"/></svg>
+                </div>
+                <h3>Leadwork</h3>
+                <p>Specialist leadwork for chimneys, flashing, valleys and custom applications by experienced craftsmen.</p>
+                <span class="service-link">Learn more <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose Us -->
+<section class="why-us" aria-labelledby="why-heading">
+    <div class="container">
+        <div class="section-header">
+            <h2 id="why-heading" class="section-title">Why Choose Glasgow Roofmasters?</h2>
+        </div>
+        <div class="why-grid">
+            <div class="why-card">
+                <div class="why-number">01</div>
+                <h3>Free No-Obligation Inspection</h3>
+                <p>We visit your property, assess your roof thoroughly, and provide a detailed quote with no pressure and no obligation to proceed.</p>
+            </div>
+            <div class="why-card">
+                <div class="why-number">02</div>
+                <h3>Pay Only on Completion</h3>
+                <p>Our pay-on-completion model means you only settle the invoice once the work is finished exactly as agreed — giving you complete confidence.</p>
+            </div>
+            <div class="why-card">
+                <div class="why-number">03</div>
+                <h3>5-Year Workmanship Warranty</h3>
+                <p>Every project is backed by our 5-year workmanship warranty, supplemented by manufacturer material warranties for complete protection.</p>
+            </div>
+            <div class="why-card">
+                <div class="why-number">04</div>
+                <h3>Fully Insured</h3>
+                <p>We carry full liability insurance, protecting your property and giving you total peace of mind throughout the project.</p>
+            </div>
+            <div class="why-card">
+                <div class="why-number">05</div>
+                <h3>Glasgow Specialists</h3>
+                <p>We understand Glasgow's unique weather challenges — from driving rain to freeze-thaw cycles — and specify materials accordingly.</p>
+            </div>
+            <div class="why-card">
+                <div class="why-number">06</div>
+                <h3>Scottish Building Standards</h3>
+                <p>All work meets the requirements of the Scottish Building Standards and the Building (Scotland) Regulations 2004.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Intro -->
+<section class="about-intro" aria-labelledby="about-intro-heading">
+    <div class="container">
+        <div class="about-intro-grid">
+            <div class="about-intro-content">
+                <h2 id="about-intro-heading">Roofing in Glasgow Demands Local Expertise</h2>
+                <p>Glasgow's climate presents unique challenges for roofing. The combination of heavy rainfall, strong westerly winds, and temperature fluctuations means that roofs here must be built and maintained to exacting standards.</p>
+                <p>At Glasgow Roofmasters, we have [EDIT: confirm with business] experience working across Glasgow's diverse architecture — from traditional tenements in Dennistoun and Partick to modern developments in Shawlands and Newton Mearns. We understand how local weather patterns affect different roofing materials and construction methods.</p>
+                <p>We also use RT Roofing as a subsidiary to carry out projects swiftly, expertly and safely, keeping our prices competitive without compromising on quality.</p>
+                <a href="/about" class="btn btn-secondary">Learn More About Us</a>
+            </div>
+            <div class="about-intro-visual">
+                <div class="about-image-placeholder" role="img" aria-label="Glasgow skyline with traditional Scottish architecture">
+                    <span class="placeholder-label">[Image: Glasgow skyline / roofing project]</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Gallery Preview -->
+<section class="gallery-preview" aria-labelledby="gallery-heading">
+    <div class="container">
+        <div class="section-header">
+            <h2 id="gallery-heading" class="section-title">Our Work</h2>
+            <p class="section-subtitle">Real project photos coming soon — placeholder images shown below</p>
+        </div>
+        <div class="gallery-grid" id="gallery-preview-grid">
+            <figure class="gallery-item" data-index="0">
+                <div class="gallery-image-placeholder" role="img" aria-label="Roofing project in Glasgow residential area - placeholder">
+                    <span class="placeholder-label">[Photo pending]<br>Residential roof installation</span>
+                </div>
+                <figcaption>Residential New Roof — Glasgow West End</figcaption>
+            </figure>
+            <figure class="gallery-item" data-index="1">
+                <div class="gallery-image-placeholder" role="img" aria-label="Roof restoration project Glasgow - placeholder">
+                    <span class="placeholder-label">[Photo pending]<br>Roof restoration</span>
+                </div>
+                <figcaption>Roof Restoration — Dennistoun</figcaption>
+            </figure>
+            <figure class="gallery-item" data-index="2">
+                <div class="gallery-image-placeholder" role="img" aria-label="Emergency roof repair Glasgow - placeholder">
+                    <span class="placeholder-label">[Photo pending]<br>Emergency repair</span>
+                </div>
+                <figcaption>Emergency Repair — Shawlands</figcaption>
+            </figure>
+            <figure class="gallery-item" data-index="3">
+                <div class="gallery-image-placeholder" role="img" aria-label="Leadwork chimney flashing Glasgow - placeholder">
+                    <span class="placeholder-label">[Photo pending]<br>Leadwork detail</span>
+                </div>
+                <figcaption>Leadwork — Chimney Flashing</figcaption>
+            </figure>
+            <figure class="gallery-item" data-index="4">
+                <div class="gallery-image-placeholder" role="img" aria-label="Commercial roofing Glasgow - placeholder">
+                    <span class="placeholder-label">[Photo pending]<br>Commercial project</span>
+                </div>
+                <figcaption>Commercial Roofing — Glasgow City Centre</figcaption>
+            </figure>
+            <figure class="gallery-item" data-index="5">
+                <div class="gallery-image-placeholder" role="img" aria-label="Flat roof EPDM rubber Glasgow - placeholder">
+                    <span class="placeholder-label">[Photo pending]<br>Flat roof system</span>
+                </div>
+                <figcaption>EPDM Rubber Flat Roof — Partick</figcaption>
+            </figure>
+        </div>
+        <div class="gallery-cta">
+            <a href="/gallery" class="btn btn-secondary">View Full Gallery</a>
+        </div>
+    </div>
+</section>
+
+<!-- Service Areas -->
+<section class="service-areas-home" aria-labelledby="areas-heading">
+    <div class="container">
+        <div class="section-header">
+            <h2 id="areas-heading" class="section-title">Areas We Serve</h2>
+            <p class="section-subtitle">Covering Glasgow city and surrounding postcode areas</p>
+        </div>
+        <div class="areas-grid">
+            <a href="/service-areas" class="area-card"><span>Merchant City</span></a>
+            <a href="/service-areas" class="area-card"><span>West End</span></a>
+            <a href="/service-areas" class="area-card"><span>Partick</span></a>
+            <a href="/service-areas" class="area-card"><span>Dennistoun</span></a>
+            <a href="/service-areas" class="area-card"><span>Shawlands</span></a>
+            <a href="/service-areas" class="area-card"><span>Castlemilk</span></a>
+            <a href="/service-areas" class="area-card"><span>Giffnock</span></a>
+            <a href="/service-areas" class="area-card"><span>Bishopbriggs</span></a>
+            <a href="/service-areas" class="area-card"><span>Cambuslang</span></a>
+            <a href="/service-areas" class="area-card"><span>Clydebank</span></a>
+            <a href="/service-areas" class="area-card"><span>Cumbernauld</span></a>
+            <a href="/service-areas" class="area-card"><span>East Kilbride</span></a>
+            <a href="/service-areas" class="area-card"><span>Newton Mearns</span></a>
+            <a href="/service-areas" class="area-card"><span>Paisley</span></a>
+        </div>
+        <div class="areas-map">
+            <div class="map-placeholder" role="img" aria-label="Map of Glasgow showing service areas">
+                <span class="placeholder-label">[Google Maps embed]<br>Glasgow service area coverage</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Preview -->
+<section class="faq-preview" aria-labelledby="faq-heading">
+    <div class="container">
+        <div class="section-header">
+            <h2 id="faq-heading" class="section-title">Frequently Asked Questions</h2>
+        </div>
+        <div class="faq-list" id="faq-accordion">
+            <details class="faq-item">
+                <summary class="faq-question">
+                    <span>How does the free inspection work?</span>
+                    <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </summary>
+                <div class="faq-answer">
+                    <p>We arrange a convenient time to visit your property and conduct a thorough roof assessment. You will receive a detailed written quote with no obligation to proceed. There is never any pressure — the inspection is genuinely free.</p>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-question">
+                    <span>What does "pay on completion" mean?</span>
+                    <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </summary>
+                <div class="faq-answer">
+                    <p>You do not pay anything upfront. Once the work is completed to the agreed specification and you are satisfied with the result, only then do we invoice you. This ensures complete alignment between our work and your expectations.</p>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-question">
+                    <span>What is covered by the 5-year warranty?</span>
+                    <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </summary>
+                <div class="faq-answer">
+                    <p>Our 5-year workmanship warranty covers any defects arising from our installation or repair work. In addition, the roofing materials we use carry their own manufacturer warranties — we will provide full documentation for both.</p>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-question">
+                    <span>Do you work with insurance claims?</span>
+                    <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </summary>
+                <div class="faq-answer">
+                    <p>Yes. For storm damage and other insured events, we can provide detailed reports and photographs to support your insurance claim. [EDIT: confirm with business — do you handle direct billing to insurers?]</p>
+                </div>
+            </details>
+        </div>
+        <div class="faq-cta">
+            <a href="/faq" class="btn btn-secondary">View All FAQs</a>
+        </div>
+    </div>
+</section>
+
+<!-- Final CTA -->
+<section class="final-cta" aria-labelledby="cta-heading">
+    <div class="container">
+        <div class="cta-content">
+            <h2 id="cta-heading">Contact Glasgow Roofmasters Today</h2>
+            <p>Ready to discuss your roofing project? Book your free inspection or call us directly.</p>
+            <div class="cta-actions">
+                <button class="btn btn-primary btn-lg inspection-trigger" data-modal="inspection-modal">Book a Free Inspection</button>
+                <a href="tel:{{ business.phone }}" class="btn btn-outline btn-lg">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.56 12.56 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.56 12.56 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    {{ business.phone }}
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
