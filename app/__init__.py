@@ -1,1 +1,0 @@
-"""Glasgow Roofmasters application package."""
